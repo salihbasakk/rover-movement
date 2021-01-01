@@ -1,8 +1,8 @@
 <?php
 
-namespace Service\Strategy\Spin;
+namespace App\Service\Strategy\Spin;
 
-use Service\Strategy\Parameters;
+use App\Service\Strategy\Parameters;
 
 class Spin
 {

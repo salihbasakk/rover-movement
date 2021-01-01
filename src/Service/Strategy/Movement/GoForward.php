@@ -1,6 +1,6 @@
 <?php
 
-namespace Service\Strategy\Movement;
+namespace App\Service\Strategy\Movement;
 
 class GoForward implements MovementStrategyInterface
 {

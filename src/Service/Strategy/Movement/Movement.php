@@ -1,8 +1,8 @@
 <?php
 
-namespace Service\Strategy\Movement;
+namespace App\Service\Strategy\Movement;
 
-use Service\Strategy\Parameters;
+use App\Service\Strategy\Parameters;
 
 class Movement
 {

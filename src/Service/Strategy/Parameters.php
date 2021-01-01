@@ -1,12 +1,12 @@
 <?php
 
-namespace Service\Strategy;
+namespace App\Service\Strategy;
 
 class Parameters
 {
-    /** @var null|string $x */
+    /** @var null|int $x */
     private $x;
-    /** @var null|string $y */
+    /** @var null|int $y */
     private $y;
     /** @var null|string $z */
     private $z;
@@ -14,38 +14,38 @@ class Parameters
     private $instruction;
 
     /**
-     * @return string|null
+     * @return int|null
      */
-    public function getX(): ?string
+    public function getX(): ?int
     {
         return $this->x;
     }
 
     /**
-     * @param string|null $x
+     * @param int|null $x
      *
      * @return Parameters
      */
-    public function setX(?string $x): Parameters
+    public function setX(?int $x): Parameters
     {
         $this->x = $x;
         return $this;
     }
 
     /**
-     * @return string|null
+     * @return int|null
      */
-    public function getY(): ?string
+    public function getY(): ?int
     {
         return $this->y;
     }
 
     /**
-     * @param string|null $y
+     * @param int|null $y
      *
      * @return Parameters
      */
-    public function setY(?string $y): Parameters
+    public function setY(?int $y): Parameters
     {
         $this->y = $y;
         return $this;

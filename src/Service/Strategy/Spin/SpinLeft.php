@@ -1,6 +1,6 @@
 <?php
 
-namespace Service\Strategy\Spin;
+namespace App\Service\Strategy\Spin;
 
 class SpinLeft implements SpinStrategyInterface
 {
