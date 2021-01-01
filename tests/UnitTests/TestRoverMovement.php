@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Tests\UnitTests;
+
 use App\RoverMovement;
 use App\Tests\TestCase;
 
