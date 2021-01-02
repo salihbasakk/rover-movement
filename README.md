@@ -25,6 +25,32 @@ Install the project dependencies:
 composer install
 ```
 
+## Usage
+
+Create new Rover Movement Service
+
+```
+$roverMovement = new RoverMovementService();
+```
+
+Specify starting point
+
+```
+[$x, $y, $z] = [1, 2, 'N']  
+```
+
+Give river instructions
+
+```
+$instructions = str_split('LMLMLMRRM');
+```
+
+And finally;
+
+```
+$result = $roverMovement->moveAction($x, $y, $z, $instructions);
+```
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
