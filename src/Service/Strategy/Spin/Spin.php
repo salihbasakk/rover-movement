@@ -24,8 +24,6 @@ class Spin
 
     public static function makeSpin(Parameters $parameters): string
     {
-        self::init();
-
         return self::getStrategy($parameters->getInstruction())->makeSpin($parameters->getZ());
     }
 

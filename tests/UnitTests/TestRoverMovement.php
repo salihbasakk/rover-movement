@@ -2,12 +2,12 @@
 
 namespace App\Tests\UnitTests;
 
-use App\RoverMovement;
+use App\Service\RoverMovementService;
 use App\Tests\TestCase;
 
 /**
  * Class TestRoverMovement
- * @coversDefaultClass RoverMovement
+ * @coversDefaultClass RoverMovementService
  */
 class TestRoverMovement extends TestCase
 {
@@ -16,7 +16,7 @@ class TestRoverMovement extends TestCase
      */
     public function testMoveAction()
     {
-        $roverMovement = new RoverMovement();
+        $roverMovement = new RoverMovementService();
 
         [$x1, $y1, $z1] = $this->getStartingPoints()[0];
         [$x2, $y2, $z2] = $this->getStartingPoints()[1];

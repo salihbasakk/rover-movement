@@ -1,19 +1,22 @@
 <?php
 
-namespace App;
+namespace App\Service;
 
-use App\Service\Strategy\Movement\GoForward;
+use App\Helpers\ParametersBuilderHelper;
 use App\Service\Strategy\Movement\Movement;
-use App\Service\Strategy\Parameters;
+use App\Service\Strategy\Movement\GoForward;
 use App\Service\Strategy\Spin\Spin;
 use App\Service\Strategy\Spin\SpinLeft;
 use App\Service\Strategy\Spin\SpinRight;
 
-class RoverMovement
+class RoverMovementService
 {
     public function moveAction($x, $y, $z, $instructions): string
     {
-        $parameters = self::buildParameters($x, $y, $z);
+        $parameters = ParametersBuilderHelper::buildParameters($x, $y, $z);
+
+        Spin::init();
+        Movement::init();
 
         foreach ($instructions as $instruction) {
             $parameters->setInstruction($instruction);
@@ -25,24 +28,8 @@ class RoverMovement
             if ($instruction === GoForward::MOVE) {
                 [$x, $y, $z] = Movement::makeMove($parameters);
             }
-            $parameters = self::resetParameters($x, $y, $z, $parameters);
+            $parameters = ParametersBuilderHelper::resetParameters($x, $y, $z, $parameters);
         }
         return $x . $y . $z;
-    }
-
-    public static function buildParameters(?int $x, ?int $y, ?string $z): Parameters
-    {
-        return (new Parameters())
-            ->setX($x)
-            ->setY($y)
-            ->setZ($z);
-    }
-
-    public static function resetParameters(?int $x, ?int $y, ?string $z, $parameters): Parameters
-    {
-        return $parameters
-            ->setX($x)
-            ->setY($y)
-            ->setZ($z);
     }
 }

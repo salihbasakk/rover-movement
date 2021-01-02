@@ -23,8 +23,6 @@ class Movement
 
     public static function makeMove(Parameters $parameters)
     {
-        self::init();
-        
         return self::getStrategy($parameters->getInstruction())->makeMove($parameters->getX(),
             $parameters->getY(), $parameters->getZ());
     }
