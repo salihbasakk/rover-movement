@@ -56,7 +56,9 @@ And finally;
 
 ```
 $result = $roverMovement->moveAction($width, $height, $x, $y, $z, $instructions);
-``
+```
+
+13N is the waiting result
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
