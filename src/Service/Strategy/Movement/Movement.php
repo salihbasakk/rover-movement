@@ -23,8 +23,13 @@ class Movement
 
     public static function makeMove(Parameters $parameters)
     {
-        return self::getStrategy($parameters->getInstruction())->makeMove($parameters->getX(),
-            $parameters->getY(), $parameters->getZ());
+        return self::getStrategy($parameters->getInstruction())->makeMove(
+            $parameters->getWidth(),
+            $parameters->getHeight(),
+            $parameters->getX(),
+            $parameters->getY(),
+            $parameters->getZ()
+        );
     }
 
     public static function getStrategy(string $instruction): MovementStrategyInterface

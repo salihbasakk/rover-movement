@@ -18,14 +18,17 @@ class TestRoverMovement extends TestCase
     {
         $roverMovement = new RoverMovementService();
 
+        $width = 5; //x coordinate area
+        $height = 5; //y coordinate area
+
         [$x1, $y1, $z1] = $this->getStartingPoints()[0];
         [$x2, $y2, $z2] = $this->getStartingPoints()[1];
 
         $instructionsRoverOne = str_split($this->getInstructions()[0]);
         $instructionsRoverTwo = str_split($this->getInstructions()[1]);
 
-        $this->assertEquals('13N', $roverMovement->moveAction($x1, $y1, $z1, $instructionsRoverOne));
-        $this->assertEquals('51E', $roverMovement->moveAction($x2, $y2, $z2, $instructionsRoverTwo));
+        $this->assertEquals('13N', $roverMovement->moveAction($width, $height, $x1, $y1, $z1, $instructionsRoverOne));
+        $this->assertEquals('51E', $roverMovement->moveAction($width, $height, $x2, $y2, $z2, $instructionsRoverTwo));
     }
 
     public function getInstructions(): array

@@ -33,6 +33,13 @@ Create new Rover Movement Service
 $roverMovement = new RoverMovementService();
 ```
 
+Specify plateau area
+
+```
+ $width = 5; //x axis
+ $height = 5; //y axis
+```
+
 Specify starting point
 
 ```
@@ -48,8 +55,8 @@ $instructions = str_split('LMLMLMRRM');
 And finally;
 
 ```
-$result = $roverMovement->moveAction($x, $y, $z, $instructions);
-```
+$result = $roverMovement->moveAction($width, $height, $x, $y, $z, $instructions);
+``
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

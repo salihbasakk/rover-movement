@@ -10,7 +10,7 @@ interface MovementStrategyInterface
     public const NORTH = 'N';
     public const SOUTH = 'S';
 
-    public function makeMove($x, $y, $z);
+    public function makeMove($width, $height, $x, $y, $z);
 
     public function getInstruction();
 }

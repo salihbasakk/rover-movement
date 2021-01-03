@@ -11,9 +11,9 @@ use App\Service\Strategy\Spin\SpinRight;
 
 class RoverMovementService
 {
-    public function moveAction($x, $y, $z, $instructions): string
+    public function moveAction($width, $height, $x, $y, $z, $instructions): string
     {
-        $parameters = ParametersBuilderHelper::buildParameters($x, $y, $z);
+        $parameters = ParametersBuilderHelper::buildParameters($width, $height, $x, $y, $z);
 
         Spin::init();
         Movement::init();

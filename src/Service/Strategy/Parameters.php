@@ -10,6 +10,10 @@ class Parameters
     private $y;
     /** @var null|string $z */
     private $z;
+    /** @var null|int $width */
+    private $width;
+    /** @var null|int $height */
+    private $height;
     /** @var null|string $instruction */
     private $instruction;
 
@@ -67,6 +71,44 @@ class Parameters
     public function setZ(?string $z): Parameters
     {
         $this->z = $z;
+        return $this;
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getWidth(): ?int
+    {
+        return $this->width;
+    }
+
+    /**
+     * @param int|null $width
+     *
+     * @return Parameters
+     */
+    public function setWidth(?int $width): Parameters
+    {
+        $this->width = $width;
+        return $this;
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getHeight(): ?int
+    {
+        return $this->height;
+    }
+
+    /**
+     * @param int|null $height
+     *
+     * @return Parameters
+     */
+    public function setHeight(?int $height): Parameters
+    {
+        $this->height = $height;
         return $this;
     }
 
